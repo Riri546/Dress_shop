@@ -1,0 +1,534 @@
+.content__basket {
+    @extend %center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .goods {
+        padding-top: 69px;
+
+        &__item {
+            width: 652px;
+            -webkit-box-shadow: 0px 5px 10px 2px rgba(93, 93, 93, 0.2);
+            -moz-box-shadow: 0px 5px 10px 2px rgba(93, 93, 93, 0.2);
+            box-shadow: 0px 5px 10px 2px rgba(93, 93, 93, 0.2);
+            display: flex;
+            gap: $gapGrid;
+            margin-bottom: 40px;
+            transition: 1.2s;
+        }
+
+        &__item:hover {
+            transform: scale(1.1);
+        }
+
+        &__img {
+            width: 262px;
+        }
+
+        &__about {
+            padding-top: 22px;
+        }
+
+        &__about__title {
+            padding-bottom: 42px;
+            @extend %flex-centr;
+            align-items: normal;
+            gap: 57px;
+        }
+
+        &__title {
+            width: 262px;
+            color: $colorContent;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: $weightRegular;
+            line-height: normal;
+        }
+
+        &__delete:hover {
+            fill: $colorSelectStyle;
+        }
+
+        &__text {
+            padding-bottom: 6px;
+            color: #575757;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: $weightRegular;
+            line-height: normal;
+        }
+
+        &__price {
+            color: $colorSelectStyle;
+        }
+
+        &__color {
+            color: #6F6E6E;
+        }
+
+        &__number {
+            margin-left: 24px;
+            padding: 1px 17px;
+            width: 44px;
+            border: 1px solid #EAEAEA;
+            color: $colorSubtextContent;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: $weightRegular;
+            line-height: normal;
+        }
+
+        &__button {
+            @extend %flex-centr;
+            margin-bottom: 144px;
+            gap: 192px;
+        }
+
+        .button__clear {
+            border: 1px solid $colorCatalog;
+            padding: 17px 40px;
+            transition: all $transitionSelectSite;
+        }
+
+        .button__clear:hover {
+            background-color: $colorSelectStyle;
+            border-color: $colorSelectStyle;
+
+            .goods__link {
+                color: $colorBackgroundWite;
+                text-decoration: none;
+            }
+        }
+
+        .button__clear:active {
+            background-color: $colorBackgroundWite;
+            border-color: $colorCatalog;
+
+            .goods__link {
+                color: $colorContent;
+                text-decoration: none;
+            }
+        }
+
+        .button__continue {
+            border: 1px solid $colorCatalog;
+            padding: 17px 40px;
+            transition: all $transitionSelectSite;
+        }
+
+        .button__continue:hover {
+            background-color: $colorSelectStyle;
+            border-color: $colorSelectStyle;
+
+            .goods__link {
+                color: $colorBackgroundWite;
+                text-decoration: none;
+            }
+        }
+
+        .button__continue:active {
+            background-color: $colorBackgroundWite;
+            border-color: $colorCatalog;
+
+            .goods__link {
+                color: $colorContent;
+                text-decoration: none;
+            }
+        }
+
+        &__link {
+            color: $colorContent;
+            font-size: $sizeSmall;
+            font-style: normal;
+            font-weight: $weightLight;
+            line-height: normal;
+            margin-bottom: 144px;
+            transition: all $transitionSelectSite;
+        }
+    }
+
+    .form {
+        padding-top: 113px;
+
+        &__title {
+            padding-bottom: 20px;
+            color: $colorContent;
+            font-size: $sizeAverage;
+            font-style: normal;
+            font-weight: $weightLight;
+            line-height: normal;
+        }
+
+        &__input {
+            margin-bottom: 20px;
+            padding: 14px 0px 14px 17px;
+            width: 360px;
+            color: $colorContent;
+            font-size: $sizeSmall;
+            font-style: normal;
+            font-weight: $weightLight;
+            line-height: normal;
+        }
+
+        &__input1 {
+            color: #B1B1B1;
+        }
+
+        &__button {
+            width: 102px;
+            padding: 11px 14px;
+            border: 1px solid $colorSubtextContent;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: $weightLight;
+            line-height: normal;
+            transition: all $transitionSelectSite;
+        }
+
+        &__button:hover {
+            background: $colorSelectStyle;
+            border-color: $colorSelectStyle;
+
+            .form__link {
+                text-decoration: none;
+                color: $colorBackgroundWite;
+            }
+        }
+
+        &__button:active {
+            background: $colorBackgroundWite;
+            border-color: $colorSubtextContent;
+
+            .form__link {
+                color: $colorSubtextContent;
+            }
+        }
+
+        &__link {
+            color: $colorSubtextContent;
+            transition: all $transitionSelectSite;
+        }
+
+        &__item2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-top: 39px;
+            padding-bottom: 42px;
+            padding-right: 34px;
+            padding-left: 72px;
+            margin-top: 57px;
+            background: #F5F3F3;
+        }
+
+        &__text {
+            padding-bottom: 12px;
+            @extend %flex-messeng;
+            justify-content: flex-end;
+            gap: 20px;
+            color: $colorSubtextContent;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: $weightRegular;
+            line-height: normal;
+        }
+
+        &__title__price {
+            margin: 0;
+            @extend %flex-messeng;
+            justify-content: flex-end;
+            width: 257px;
+            border-bottom: 1px solid #E2E2E2;
+            padding-bottom: 21px;
+            color: $colorContent;
+            font-size: $sizeAverage;
+            font-style: normal;
+            font-weight: $weightLight;
+            line-height: normal;
+        }
+
+        .title__price {
+            padding-left: 20px;
+            color: $colorSelectStyle;
+            font-weight: $weightBold;
+        }
+
+        &__button__item {
+            margin-top: 17px;
+            padding: 15px 40px;
+            border: 1px solid $colorSelectStyle;
+            background: $colorSelectStyle;
+            width: 273px;
+            transition: all $transitionSelectSite;
+        }
+
+        &__button__item:hover {
+            background: $colorBackgroundWite;
+
+            .button__text {
+                text-decoration: none;
+                color: $colorSelectStyle;
+            }
+        }
+
+        &__button__item:active {
+            background: $colorSelectStyle;
+
+            .button__text {
+                color: $colorBackgroundWite;
+            }
+        }
+
+        .button__text {
+            color: $colorBackgroundWite;
+            font-size: $sizeAverage;
+            font-style: normal;
+            font-weight: $weightLight;
+            line-height: normal;
+            transition: all $transitionSelectSite;
+        }
+    }
+}
+
+// Nest Hub Max
+//  Для страницы basket
+@media (max-width: 1280px) {
+    .subhead {
+        padding-left: calc(50% - $widthSiteNest/2);
+        padding-right: calc(50% - $widthSiteNest/2);
+        padding-top: 18px;
+        padding-bottom: 32px;
+    }
+
+    .content__basket {
+        padding-left: calc(50% - $widthSiteNest/2);
+        padding-right: calc(50% - $widthSiteNest/2);
+
+        .goods {
+            &__item {
+                width: 940px;
+            }
+
+            &__about {
+                &__title {
+                    gap: 100px;
+
+                    .goods__title {
+                        max-width: 300px;
+                    }
+                }
+            }
+
+            &__button {
+                margin-bottom: 0px;
+                justify-content: center;
+            }
+        }
+
+        .form {
+            padding-top: 64px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 190px;
+
+            &__item2 {
+                margin-top: 0px;
+
+                .form__button__item {
+                    min-width: 290px;
+                }
+            }
+
+            .form__button {
+                min-width: 110px;
+            }
+
+
+        }
+
+
+    }
+}
+
+/* Стили для планшета */
+//  Для страницы basket
+@media (max-width: 1024px) {
+
+    .subhead {
+        padding-left: calc(50% - $widthSitetTablet/2);
+        padding-right: calc(50% - $widthSitetTablet/2);
+    }
+
+    .content__basket {
+        padding-left: calc(50% - $widthSitetTablet/2);
+        padding-right: calc(50% - $widthSitetTablet/2);
+
+        .goods__item {
+            width: 734px;
+        }
+
+        .goods__button {
+            justify-content: center;
+            margin-bottom: 0px;
+            gap: 48px;
+        }
+
+        .form {
+            padding-left: calc(50% - $widthSitetTablet/2);
+            padding-right: calc(50% - $widthSitetTablet/2);
+            padding-top: 64px;
+            padding-bottom: 128px;
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+
+            &__item2 {
+                margin-top: 0px;
+                max-width: 360px;
+                max-height: 214px;
+            }
+        }
+    }
+}
+
+/* Стили для среднего телефона */
+//  Для страницы basket
+@media (max-width: 767px) {
+
+    .subhead {
+        padding-left: calc(50% - $widthSitetAveragePhone/2);
+        padding-right: calc(50% - $widthSitetAveragePhone/2);
+        justify-content: center;
+    }
+
+    .content__basket {
+        padding-left: calc(50% - $widthSitetAveragePhone/2);
+        padding-right: calc(50% - $widthSitetAveragePhone/2);
+
+        .goods {
+
+            &__item {
+                width: 359px;
+            }
+
+            &__img {
+                width: 144px;
+            }
+
+            &__about {
+                padding-bottom: 38px;
+
+                &__title {
+                    padding-bottom: 25px;
+                    gap: 20px;
+                }
+            }
+
+            &__title {
+                width: 143px;
+                font-size: 16px;
+            }
+
+            &__close {
+                width: 10px;
+            }
+
+            &__text {
+                font-size: 14px;
+            }
+
+            &__number {
+                font-size: 14px;
+            }
+
+            &__button {
+                gap: 9px;
+            }
+
+            &__link {
+                font-size: 12px;
+            }
+
+            .button__continue {
+                padding: 9px 18px;
+            }
+
+            .button__clear {
+                padding: 9px 18px;
+            }
+        }
+
+        .form {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+/* Стили для маленького телефона */
+//  Для страницы basket
+@media (max-width: 321px) {
+
+    .content__basket {
+
+        .goods {
+
+            &__item {
+                width: 320px;
+                gap: 10px;
+            }
+
+            &__about__title {
+                padding-bottom: 15px;
+                gap: 5px;
+            }
+
+            &__title {
+                font-size: 14px;
+            }
+
+            &__text {
+                font-size: 12px;
+            }
+
+            &__number {
+                font-size: 12px;
+            }
+
+            &__button {
+                gap: 30px;
+            }
+
+            .button__clear {
+                padding: 2px 1px;
+            }
+
+            .button__continue {
+                padding: 2px 1px;
+            }
+        }
+
+        .form {
+            padding-left: calc(50% - $widthSitetSmallPhone/2);
+            padding-right: calc(50% - $widthSitetSmallPhone/2);
+            padding-bottom: 100px;
+            flex-wrap: wrap;
+
+            &__input {
+                width: 320px;
+                font-size: 12px;
+            }
+
+            &__button {
+                font-size: 10px;
+            }
+
+            &__item2 {
+                max-width: 320px;
+            }
+        }
+    }
+}

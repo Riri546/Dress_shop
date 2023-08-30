@@ -1,0 +1,248 @@
+.filter__sort {
+    @extend %center;
+    height: 132px;
+    padding-top: 39px;
+    box-sizing: border-box;
+    position: relative;
+    background: $colorTextContent;
+    display: flex;
+    gap: $gapGrid;
+
+    .filter {
+        padding-top: 13px;
+        width: 360px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 10;
+
+        &[open] {
+            background: $colorTextContent;
+            box-shadow: 6px 4px 35px rgb(0, 0, 0, 0.21);
+        }
+
+        &__content {
+            position: absolute;
+            background-color: #fff;
+            padding: 0px 16px 16px 16px;
+            width: 360px;
+            box-sizing: border-box;
+        }
+
+        &__summary {
+            @extend %flex-align-items;
+            gap: 11px;
+            padding-left: 16px;
+        }
+
+        &__heading {
+            color: $colorContent;
+            font-size: $sizeSmall;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        &[open] .filter__heading {
+            color: $colorSelectStyle;
+        }
+
+        &[open] .filter__button {
+            fill: $colorSelectStyle;
+        }
+
+        &__item {
+            margin-top: 16px;
+        }
+
+        &__head {
+            color: $colorContent;
+            font-size: $sizeSmall;
+            font-weight: $weightRegular;
+            font-style: normal;
+            line-height: normal;
+            padding: 8px 11px 11px 11px;
+            border-bottom: 1px solid #EBEBEB;
+            border-left: 5px solid $colorSelectStyle;
+        }
+
+        .filter__item[open] .filter__head {
+            color: $colorSelectStyle;
+        }
+
+        &__link__box {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            padding: 24px 16px;
+        }
+
+        &__link {
+            color: $colorSubtextContent;
+            font-size: $sizeSmall;
+            font-weight: $weightRegular;
+            font-style: normal;
+            line-height: normal;
+
+            &:hover {
+                color: $colorSelectStyle;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .sort {
+        padding-top: 12px;
+        display: flex;
+        gap: 18px;
+
+        &__deteils {
+            position: relative;
+        }
+
+        &__summary {
+            @extend %flex-align-items;
+            gap: 10px;
+        }
+
+        &__check {
+            @extend %flex-align-items;
+            gap: 10px;
+        }
+
+        &__heading {
+            color: $colorSubtextContent;
+            font-size: $sizeSmall;
+            font-weight: $weightRegular;
+            font-style: normal;
+            line-height: normal;
+        }
+
+        &__box {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            z-index: 10;
+            background: $colorBackgroundWite;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            padding: 7px 30px 11px 9px;
+            left: -9px;
+            top: 22px
+        }
+
+        &__check {
+            font-family: 'Roboto', sans-serif;
+            color: $colorSubtextContent;
+            font-size: $sizeSmall;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: $weightRegular;
+            line-height: normal;
+        }
+    }
+}
+
+.catalog__navigation {
+    @extend %center;
+    @extend %flex-centr-head;
+    justify-content: center;
+    padding-bottom: 96px;
+    background: $colorTextContent;
+
+    .navigation {
+        padding: 13px 15px;
+        border: 1px solid $colorCatalog;
+        border-radius: 5px;
+
+        &__number {
+            padding-left: 8px;
+            padding-right: 8px;
+            text-decoration: none;
+            font-style: normal;
+            line-height: normal;
+            font-size: $sizeAverage;
+            font-weight: $weightLight;
+            color: $colorCatalog;
+            transition: $transitionSelectSite;
+        }
+
+        &__number:hover {
+            color: $colorSelectStyle;
+        }
+
+        &__button:active {
+            fill: $colorSubtextContent;
+        }
+    }
+}
+
+// Nest Hub Max
+//  Для страницы index
+@media (max-width: 1280px) {
+    .filter__sort {
+        padding-left: calc(50% - $widthSiteNest/2);
+        padding-right: calc(50% - $widthSiteNest/2);
+        justify-content: space-between;
+
+        .filter {
+
+            &__summary {
+                padding-left: 0px;
+            }
+        }
+    }
+}
+
+/* Стили для планшета */
+//  Для страницы catalog
+@media (max-width: 1024px) {
+    .filter__sort {
+        padding-left: calc(50% - $widthSitetTablet/2);
+        padding-right: calc(50% - $widthSitetTablet/2);
+        height: 0px;
+        padding-top: 12px;
+        justify-content: space-between;
+
+        .filter {
+
+            &__summary {
+                padding-left: 0px;
+            }
+        }
+
+        .sort {
+
+            &__heading {
+                font-size: 12px;
+            }
+
+            &__summary {
+                gap: 9px;
+            }
+
+            &__now {
+                min-width: 96px;
+            }
+        }
+    }
+}
+
+/* Стили для среднего телефона */
+//  Для страницы catalog
+@media (max-width: 767px) {
+    .filter__sort {
+        padding-left: calc(50% - $widthSitetAveragePhone/2);
+        padding-right: calc(50% - $widthSitetAveragePhone/2);
+    }
+
+    .filter {
+
+        &__heading {
+            display: none;
+        }
+
+        &__svg {
+            width: 37.5px;
+            height: 25px;
+        }
+    }
+}
